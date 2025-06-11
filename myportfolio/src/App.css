@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.gradient-border-card {
+  position: relative;
+  border-radius: 0.75rem; /* rounded-xl */
+  background: #1c1f2b;
+  z-index: 0;
+}
+
+.gradient-border-card::before,
+.gradient-border-card::after {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--angle),
+    #ff5d9e, #8f71ff, #82acff, #8bffff, #ff5d9e);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: rotateGradient 3s linear infinite;
+}
+
+.gradient-border-card:hover::after {
+  opacity: 1;
+}
+
+.gradient-border-card:hover::before {
+  filter: blur(1rem);
+  opacity: 0.6;
+}
+
+@keyframes rotateGradient {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}

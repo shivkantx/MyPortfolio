@@ -13,7 +13,17 @@ import mail from "../assets/mail.svg";
 import profile from "../assets/profile.jpeg";
 import CodeSVG from "../components/SVG_LoGo/CodeSVG";
 import AwardSVG from "../components/SVG_LoGo/AwardSVG";
-import {HtmlLogo, CssLogo, JavaScriptLogo, ReactLogo, JavaLogo, PythonLogo, TailwindLogo, DjangoLogo, CPlusPlusLogo,} from "../assets/ProgramLangIMGExport";
+import {
+  HtmlLogo,
+  CssLogo,
+  JavaScriptLogo,
+  ReactLogo,
+  JavaLogo,
+  PythonLogo,
+  TailwindLogo,
+  DjangoLogo,
+  CPlusPlusLogo,
+} from "../assets/ProgramLangIMGExport";
 
 function Home() {
   useEffect(() => {
@@ -404,69 +414,27 @@ function Home() {
               </li>
             </ul>
 
-            <div className="bg-gray-800 p-5 space-x-6 justify-center text-white items-center rounded-xl flex flex-wrap gap-10 ">
-
-              <div
-  data-aos="fade-left"
-  className="group flex flex-col bg-gray-300/20 backdrop-blur-lg 
-             hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 
-             transform transition-transform duration-200 
-             hover:backdrop-blur-lg px-7 justify-center items-center py-6 
-             rounded-xl space-y-1"
->
-  <img
-    src={PythonLogo}
-    alt=""
-    className="h-[90px] w-[90px] transition-all duration-300 group-hover:filter group-hover:drop-shadow-[0_0_15px_rgb(255,255,0)]"
-  />
-  <p className="font-bold">Python</p>
-</div>
-
-
-
-              <div data-aos="fade-up" className="flex flex-col  bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover: scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img src={CssLogo} alt="" className="h-[90px] w-[90px]" />
-                <p className="font-bold">CSS</p>
-              </div>
-
-              <div data-aos="fade-left" className="flex flex-col  bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover: scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img
-                  src={JavaScriptLogo}
-                  alt=""
-                  className="h-[90px] w-[90px]"
-                />
-                <p className="font-bold">JavaScript</p>
-              </div>
-
-              <div data-aos="fade-right" className="flex flex-col bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover: scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img src={ReactLogo} alt="" className="h-[90px] w-[90px]" />
-                <p className="font-bold">React</p>
-              </div>
-
-              <div data-aos="fade-up" className="flex flex-col  bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover: scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img src={JavaLogo} alt="" className="h-[90px] w-[90px]" />
-                <p className="font-bold">Java</p>
-              </div>
-
-              <div data-aos="fade-left" className="flex flex-col  bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover:scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img src={PythonLogo} alt="" className="h-[90px] w-[90px]" />
-                <p className="font-bold">Python</p>
-              </div>
-
-              <div data-aos="fade-right" className="flex flex-col  bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover: scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img src={TailwindLogo} alt="" className="h-[90px] w-[90px]" />
-                <p className="font-bold">Tailwind</p>
-              </div>
-
-              <div data-aos="fade-up" className="flex flex-col  bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover: scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img src={DjangoLogo} alt="" className="h-[90px] w-[90px]" />
-                <p className="font-bold">Django</p>
-              </div>
-
-              <div data-aos="fade-left" className="flex flex-col  bg-gray-300/20  backdrop-blur-lg  hover:border-blue-500 hover:border-4 hover:bg-gray-500/10 hover: scale-105 transform duration-200  hover:backdrop-blur-lg px-7 justify-center items-center py-6 rounded-xl space-y-1">
-                <img src={CPlusPlusLogo} alt="" className="h-[90px] w-[90px]" />
-                <p className="font-bold">C++</p>
-              </div>
+            <div className="bg-gray-800 p-5 text-white rounded-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
+              {[
+                { logo: PythonLogo, label: "Python", aos: "fade-left" },
+                { logo: CssLogo, label: "CSS", aos: "fade-up" },
+                { logo: JavaScriptLogo, label: "JavaScript", aos: "fade-left" },
+                { logo: ReactLogo, label: "React", aos: "fade-right" },
+                { logo: JavaLogo, label: "Java", aos: "fade-up" },
+                { logo: PythonLogo, label: "Python", aos: "fade-left" },
+                { logo: TailwindLogo, label: "Tailwind", aos: "fade-right" },
+                { logo: DjangoLogo, label: "Django", aos: "fade-up" },
+                { logo: CPlusPlusLogo, label: "C++", aos: "fade-left" },
+              ].map(({ logo, label, aos }, index) => (
+                <div
+                  key={index}
+                  data-aos={aos}
+                  className="gradient-border-card relative m-auto p-8 backdrop-blur-lg bg-gray-400/10 rounded-lg items-center justify-center text-center space-y-2 transition-all duration-200 hover:scale-105"
+                >
+                  <img src={logo} alt={label} className="h-[90px] w-[90px]" />
+                  <p className="font-bold">{label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

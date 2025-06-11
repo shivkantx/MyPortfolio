@@ -1,2 +1,14 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .bg-size-200 {
+    background-size: 200% 200%;
+  }
+  .bg-pos-left-top {
+    background-position: left top;
+  }
+  .hover\:bg-pos-right-bottom:hover {
+    background-position: right bottom;
+  }
+}
+

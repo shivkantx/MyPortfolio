@@ -74,16 +74,16 @@ function Home() {
               data-aos="fade-left"
               className="mt-6 flex flex-col sm:flex-row gap-4"
             >
-              <div className=" hover:scale-110 transition-all duration-200 px-8 py-2 font-semibold bg-gradient-to-r hover:from-[#2abfff] hover:to-[#0071FF] hover:bg-gradient-to-r from-[#ffee00] to-[#ffb300] text-black rounded-lg">
-                <Link to="https://github.com/Shivkant639624?tab=repositories">
+              <div className="group hover:scale-110 transition-all duration-200 px-8 py-2 font-semibold bg-gradient-to-r hover:from-[#2abfff] hover:to-[#0071FF] hover:bg-gradient-to-r from-[#ffee00] to-[#ffb300] text-black rounded-lg">
+                <Link to="https://github.com/shivkantx">
                   Projects{" "}
-                  <img src={projectLogo} className="inline-block w-5" alt="" />
+                  <img src={projectLogo} className="inline-block w-5 group-hover:rotate-15" alt="" />
                 </Link>
               </div>
-              <div className="hover:scale-110 transition-all duration-200 px-8 py-2 font-semibold bg-gradient-to-r hover:from-[#2abfff] hover:to-[#0071FF] hover:bg-gradient-to-r from-[#ffee00] to-[#ffb300] text-black rounded-lg">
+              <div className="group hover:scale-110 transition-all duration-200 px-8 py-2 font-semibold bg-gradient-to-r hover:from-[#2abfff] hover:to-[#0071FF] hover:bg-gradient-to-r from-[#ffee00] to-[#ffb300] text-black rounded-lg">
                 <Link to="/contact">
                   Contact{" "}
-                  <img src={mail} className="inline-block w-4 " alt="" />
+                  <img src={mail} className="group-hover:rotate-15 inline-block w-4 " alt="" />
                 </Link>
               </div>
             </div>
@@ -177,9 +177,9 @@ function Home() {
                     &nbsp; Download CV
                   </Link>
                 </div>
-                <div className="hover:scale-110 transition-all duration-200 px-8 py-2 font-semibold bg-gradient-to-r hover:from-[#2abfff] hover:to-[#0071FF] hover:bg-gradient-to-r from-[#ffee00] to-[#ffb300] text-black rounded-lg">
-                  <Link to="https://github.com/Shivkant639624?tab=repositories">
-                    <CodeSVG />
+                <div className="group hover:scale-110 transition-all duration-200 px-8 py-2 font-semibold bg-gradient-to-r hover:from-[#2abfff] hover:to-[#0071FF] hover:bg-gradient-to-r from-[#ffee00] to-[#ffb300] text-black rounded-lg">
+                  <Link to="https://github.com/shivkantx">
+                    <CodeSVG className="group-hover:rotate-15"/>
                     &nbsp; View Projects
                   </Link>
                 </div>
@@ -198,148 +198,132 @@ function Home() {
         </div>
 
         {/* Card section */}
-        <div className=" mt-[50px] flex flex-col md:flex-row gap-x-5 gap-y-5">
-          {/* card 1 */}
-          <div
-            data-aos="fade-right"
-            className="w-1/3 rounded-lg md:w-full sm:w-full flex flex-col bg-gray-300/20  backdrop-blur-lg  p-5 gap-y-5 transition-all duration-200 hover:scale-105 hover:bg-gray-300/35"
-          >
-            <div className=" flex justify-between">
-              <div className="flex rounded-full justify-center bg-gray-500/40 items-center   h-[60px] w-[60px]">
-                <CodeSVG />
-              </div>
-              <div>
-                <h1 data-aos="fade-left" className="text-4xl font-extrabold ">
-                  4
-                </h1>
-              </div>
-            </div>
-            <div className="flex justify-between">
-              <div>
-                <h1 data-aos="fade-up" className="text-md font-semibold ">
-                  TOTAL PROJECTS
-                </h1>
-                <p data-aos="fade-up" className="text-xs">
-                  Innovative web solutions crafted
-                </p>
-              </div>
+        <div className="mt-[50px] flex flex-wrap gap-x-5 gap-y-5">
+  {/* card 1 */}
+  <div
+    data-aos="fade-right"
+    className="group w-full lg:w-[32%] rounded-lg flex flex-col bg-gray-300/20 backdrop-blur-lg p-5 gap-y-5 transition-all duration-200 hover:scale-105 hover:bg-gray-300/35"
+  >
+    <div className="flex justify-between">
+      <div className="group-hover:rotate-15 transition-all flex rounded-full justify-center bg-gray-500/40 items-center h-[60px] w-[60px]">
+        <CodeSVG />
+      </div>
+      <div>
+        <h1 data-aos="fade-left" className="text-4xl font-extrabold">
+          4
+        </h1>
+      </div>
+    </div>
+    <div className="flex justify-between">
+      <div>
+        <h1 data-aos="fade-up" className="text-md font-semibold">
+          TOTAL PROJECTS
+        </h1>
+        <p data-aos="fade-up" className="text-xs">
+          Innovative web solutions crafted
+        </p>
+      </div>
+      <div className="flex items-end justify-end">
+        <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
+        </svg>
+      </div>
+    </div>
+  </div>
 
-              <div className=" flex items-end justify-end  ">
-                <svg
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                >
-                  <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          {/* card 2 */}
-          <div
-            data-aos="fade-up"
-            className="w-1/3 rounded-lg md:w-full sm:w-full flex flex-col bg-gray-300/20  backdrop-blur-lg p-5 gap-y-5 transition-all duration-200 hover:bg-gray-300/35 hover:scale-105"
-          >
-            <div className=" flex justify-between">
-              <div className="flex rounded-full justify-center bg-gray-500/40 items-center  h-[60px] w-[60px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M8 16l4-2 4 2v4l-4-2-4 2v-4z" />
-                </svg>
-              </div>
-              <div>
-                <h1 data-aos="fade-left" className="text-4xl font-extrabold ">
-                  2
-                </h1>
-              </div>
-            </div>
-            <div className="flex justify-between">
-              <div>
-                <h1 data-aos="fade-up" className="font-semibold ">
-                  CERTIFICATES
-                </h1>
-                <p data-aos="fade-up" className="text-xs">
-                  Professional skills validated
-                </p>
-              </div>
+  {/* card 2 */}
+  <div
+    data-aos="fade-up"
+    className="w-full lg:w-[32%] rounded-lg flex flex-col bg-gray-300/20 backdrop-blur-lg p-5 gap-y-5 transition-all duration-200 hover:bg-gray-300/35 hover:scale-105"
+  >
+    <div className="flex justify-between group">
+      <div className="flex group-hover:rotate-15 rounded-full justify-center bg-gray-500/40 items-center h-[60px] w-[60px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="8" r="4" />
+          <path d="M8 16l4-2 4 2v4l-4-2-4 2v-4z" />
+        </svg>
+      </div>
+      <div>
+        <h1 data-aos="fade-left" className="text-4xl font-extrabold">
+          2
+        </h1>
+      </div>
+    </div>
+    <div className="flex justify-between">
+      <div>
+        <h1 data-aos="fade-up" className="font-semibold">
+          CERTIFICATES
+        </h1>
+        <p data-aos="fade-up" className="text-xs">
+          Professional skills validated
+        </p>
+      </div>
+      <div className="flex items-end justify-end">
+        <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
+        </svg>
+      </div>
+    </div>
+  </div>
 
-              <div className=" flex items-end justify-end  ">
-                <svg
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                >
-                  <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
-                </svg>
-              </div>
-            </div>
-          </div>
+  {/* card 3 */}
+  <div
+    data-aos="fade-left"
+    className="group w-full lg:w-[32%] rounded-lg flex flex-col bg-gray-300/20 backdrop-blur-lg p-5 gap-y-5 transition-all duration-200 hover:bg-gray-300/35 hover:scale-105"
+  >
+    <div className="flex justify-between">
+      <div className="group-hover:rotate-15 flex rounded-full justify-center bg-gray-500/40 items-center h-[60px] w-[60px]">
+        <svg
+          className="text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 0 1 0 20a15.3 15.3 0 0 1 0-20z" />
+        </svg>
+      </div>
+      <div>
+        <h1 data-aos="fade-left" className="text-4xl font-extrabold">
+          3
+        </h1>
+      </div>
+    </div>
+    <div className="flex justify-between">
+      <div>
+        <h1 data-aos="fade-up" className="font-semibold">
+          YEARS OF EXPERIENCE
+        </h1>
+        <p data-aos="fade-up" className="text-xs">
+          Continuous learning journey
+        </p>
+      </div>
+      <div className="flex items-end justify-end">
+        <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 
-          {/* card 3 */}
-          <div
-            data-aos="fade-left"
-            className="w-1/3 rounded-lg md:w-full sm:w-full flex flex-col bg-gray-300/20  backdrop-blur-lg p-5 gap-y-5 transition-all duration-200 hover:bg-gray-300/35 hover:scale-105"
-          >
-            <div className=" flex justify-between">
-              <div className="flex rounded-full justify-center bg-gray-500/40 items-center   h-[60px] w-[60px]">
-                <svg
-                  className="text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <path d="M12 2a15.3 15.3 0 0 1 0 20a15.3 15.3 0 0 1 0-20z" />
-                </svg>
-              </div>
-              <div>
-                <h1 data-aos="fade-left" className="text-4xl font-extrabold ">
-                  3
-                </h1>
-              </div>
-            </div>
-            <div className="flex justify-between">
-              <div>
-                <h1 data-aos="fade-up" className="font-semibold ">
-                  YEARS OF EXPERIENCE
-                </h1>
-                <p data-aos="fade-up" className="text-xs">
-                  Continuous learning journey
-                </p>
-              </div>
-
-              <div className=" flex items-end justify-end  ">
-                <svg
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                >
-                  <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* portfolio Section */}
@@ -414,7 +398,7 @@ function Home() {
               </li>
             </ul>
 
-            <div className="bg-gray-800 p-5 text-white rounded-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
+            <div className="bg-gray-800 group p-5 text-white rounded-xl grid grid-cols-1 sm:grid-cols-3 xs:grid-col3 md:grid-cols-4 xl:grid-cols-6 gap-6">
               {[
                 { logo: PythonLogo, label: "Python", aos: "fade-left" },
                 { logo: CssLogo, label: "CSS", aos: "fade-up" },
@@ -429,13 +413,93 @@ function Home() {
                 <div
                   key={index}
                   data-aos={aos}
-                  className="gradient-border-card relative m-auto p-8 backdrop-blur-lg bg-gray-400/10 rounded-lg items-center justify-center text-center space-y-2 transition-all duration-200 hover:scale-105"
+                  className="gradient-border-card   relative m-auto p-8 backdrop-blur-lg bg-gray-400/10 rounded-lg items-center justify-center text-center space-y-2 transition-all duration-00 hover:backdrop-blur-lg hover:bg-gray-500/50 hover:scale-110"
                 >
                   <img src={logo} alt={label} className="h-[90px] w-[90px]" />
                   <p className="font-bold">{label}</p>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact section */}
+      <section className="w-full p-6 mb-[50px] text-white bg-[#072854]"> 
+
+        <div className="flex flex-col gap-4 md:flex-row justify-center items-center "> 
+          {/* Form 1 */}
+          <div className="md:w-1/3 rounded-lg w-full p-2 backdrop-blur-3xl bg-purple-800/30">
+             <div className="w-full flex justify-between items-center font-extrabold text-[#] p-2">
+              <div>
+                <h1 className="text-4xl ">Get in Touch</h1>
+                <p className="pl-1 text-sm">Have something to discuss? send me a message and let's talk</p>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="2" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  width="24" 
+                  height="24">
+                
+                <circle cx="6" cy="12" r="2" />
+                <circle cx="18" cy="6" r="2" />
+                <circle cx="18" cy="18" r="2" />
+
+                <line x1="7.5" y1="11" x2="16.5" y2="7" />
+                <line x1="7.5" y1="13" x2="16.5" y2="17" />
+              </svg>
+
+
+              </div>
+             </div> 
+            {/* Inputs  */}
+             <div className="px-5 py-3 space-y-8 flex flex-col text-white"> 
+              <input 
+                type="text"  
+                className="backdrop-blur-3xl w-full focus:outline-2 outline-white/20 bg-gray-950/10 rounded-lg p-2"
+                placeholder="Your name" />
+              <input 
+                type="text"  
+                className="backdrop-blur-3xl w-full focus:outline-2 outline-white/20 bg-gray-950/10 rounded-lg p-2"
+                placeholder="enter your mail" />
+              <textarea
+                rows="4"    
+                className="backdrop-blur-3xl w-full focus:outline-2 outline-white/20 bg-gray-950/10 rounded-lg p-2"
+                placeholder="Your message" />
+
+              <button className="group bg-gradient-to-r from-pink-500 via-blue-500 to-pink-500 group hover:bg-gradient-to-l hover:via-blue-500 hover:from-purple-500 hover:to-purple-500  p-3 flex items-center transition-all hover:scale-105 duration-200 justify-center space-x-2 text-sm font-semibold rounded-4xl">
+                  <svg
+                    className="group-hover:rotate-45 transition-all duration-200"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="20"
+                    height="20"
+                  >
+                    <path d="M22 2L11 13" />
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                </svg>
+                <p>send message</p></button>
+              
+
+             </div>
+
+
+          </div>
+
+          {/* form 2 */}
+          <div className="w-2/3 p-2 bg-green-200">
+
+
           </div>
         </div>
       </section>

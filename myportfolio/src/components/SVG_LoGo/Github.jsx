@@ -3,7 +3,7 @@ import React from "react";
 function Github() {
   return (
     <a
-      href="https://github.com/shivkant639624"
+      href="https://github.com/shivkantx"
       target="_blank"
       class="p-3 bg-white rounded-3xl text-gray-800 hover:text-gray-400 hover:scale-120 transition duration-300"
     >

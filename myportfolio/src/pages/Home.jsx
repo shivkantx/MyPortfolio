@@ -425,10 +425,9 @@ function Home() {
       </section>
 
       {/* Contact section */}
-      <section className="w-full p-6 mb-[50px] text-white bg-[#072854]"> 
+      {/* <section className="w-full p-6 mb-[50px] text-white bg-[#072854]"> 
 
         <div className="flex flex-col gap-4 md:flex-row justify-center items-center "> 
-          {/* Form 1 */}
           <div className="md:w-1/3 rounded-lg w-full p-2 backdrop-blur-3xl bg-purple-800/30">
              <div className="w-full flex justify-between items-center font-extrabold text-[#] p-2">
               <div>
@@ -457,8 +456,8 @@ function Home() {
 
               </div>
              </div> 
-            {/* Inputs  */}
-             <div className="px-5 py-3 space-y-8 flex flex-col text-white"> 
+
+             <form className="px-5 py-3 space-y-8 flex flex-col text-white"> 
               <input 
                 type="text"  
                 className="backdrop-blur-3xl w-full focus:outline-2 outline-white/20 bg-gray-950/10 rounded-lg p-2"
@@ -491,18 +490,17 @@ function Home() {
                 <p>send message</p></button>
               
 
-             </div>
+             </form> 
 
 
           </div>
 
-          {/* form 2 */}
           <div className="w-2/3 p-2 bg-green-200">
 
 
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

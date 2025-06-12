@@ -4,8 +4,8 @@ import Logo from "../SVG_LoGo/Logo";
 
 function Header() {
   return (
-    <div className="w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/20 shadow-md">
-      <nav className="text-black flex justify-between items-center px-4 py-3">
+    <div className=" fixed w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/20 shadow-md">
+      <nav className="text-white flex justify-between items-center px-4 py-3">
         <Link to="/" className="flex items-center pl-6 ">
           <Logo />
         </Link>

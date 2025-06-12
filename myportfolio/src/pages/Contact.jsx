@@ -83,7 +83,7 @@ function Contact() {
                     minLength: { value: 3, message: "Minimum length is 3" },
                     maxLength: { value: 8, message: "Maximum length is 8" },
                   })}
-                  className="backdrop-blur-3xl w-full focus:outline-3 border outline-blue-600 bg-gray-950/10 rounded-lg p-2"
+                  className="backdrop-blur-3xl w-full focus:outline-3 border focus:border-0 outline-blue-600 bg-gray-950/10 rounded-lg p-2"
                   placeholder="Your name"
                 />
                 {errors.username && (
@@ -101,7 +101,7 @@ function Contact() {
                       message: "This field is required",
                     },
                   })}
-                  className="backdrop-blur-3xl w-full focus:outline-3 border outline-blue-600 bg-gray-950/10 rounded-lg p-2"
+                  className="backdrop-blur-3xl w-full focus:outline-3 border focus:border-0 outline-blue-600 bg-gray-950/10 rounded-lg p-2"
                   placeholder="Enter your email"
                 />
                 {errors.mail && (
@@ -126,7 +126,7 @@ function Contact() {
                       value.trim().split(/\s+/).length <= 50 ||
                       "Maximum 50 words allowed",
                   })}
-                  className="backdrop-blur-3xl w-full focus:outline-3 border outline-blue-600 bg-gray-950/10 rounded-lg p-2"
+                  className="backdrop-blur-3xl w-full focus:outline-3 border focus:border-0 outline-blue-600 bg-gray-950/10 rounded-lg p-2"
                   placeholder="Your message"
                 />
                 {errors.message && (
@@ -162,9 +162,26 @@ function Contact() {
             </div>
 
             {/* Optional Second Column */}
-            <div className="w-2/3 p-2 bg-green-200 hidden md:block rounded-lg">
+            <div className="p-2 w-full md:w-full bg-gray-500/30 rounded-lg">
+                <div>
+                   <div className="flex gap-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      className="w-10 h-10 text-white bg-blue-600 rounded-full p-2 hover:bg-blue-700 transition"
+                    >
+                      <path d="M12 2C6.486 2 2 6.037 2 11c0 2.132.888 4.087 2.361 5.657-.33 1.327-1.192 2.784-1.354 3.056a.5.5 0 0 0 .672.717c1.04-.373 2.908-1.3 4.052-2.105A11.926 11.926 0 0 0 12 20c5.514 0 10-4.037 10-9s-4.486-9-10-9zM8 10h8v2H8v-2z" />
+                    </svg>
+
+
+                    <p>Comment</p>
+                   </div>
+                </div>
               {/* You can add contact info, map or anything else here */}
             </div>
+
+
           </div>
         </section>
       </div>

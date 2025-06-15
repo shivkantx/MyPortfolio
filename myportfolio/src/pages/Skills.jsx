@@ -1,9 +1,136 @@
-import React from 'react'
+import React from "react";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+  FaJava,
+  FaPython,
+  FaJsSquare,
+} from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaBootstrap } from "react-icons/fa6";
+import { IoLogoJavascript } from "react-icons/io5";
+import {
+  SiMysql,
+  SiAppwrite,
+  SiMongodb,
+  SiIntellijidea,
+  SiJupyter,
+  SiPycharm,
+  SiCplusplus,
+  SiDjango,
+} from "react-icons/si";
+import { VscVscodeInsiders } from "react-icons/vsc";
 
-function skills() {
+function Skills() {
   return (
-    <div>skills</div>
-  )
+    <section className="my-[50px] text-white px-[100px]">
+      <div className="flex flex-col items-center mb-6">
+        <h1
+          className="text-4xl text-center font-medium text-white mb-1"
+          data-aos="fade-up"
+        >
+          Skills
+        </h1>
+        <div className="py-1 px-[45px] bg-purple-950 rounded-md"></div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 w-full">
+        {/* Frontend */}
+        <div
+          className="bg-[#020140] backdrop-blur-2xl hover:scale-105 transform-all duration-300 p-3 rounded-md border-2 border-purple-600"
+          data-aos="fade-up"
+        >
+          <h1 className="text-xl font-medium pb-3 text-center text-white">
+            Frontend Languages
+          </h1>
+          <div className="flex flex-wrap gap-4 p-3 justify-center">
+            <SkillCard Icon={FaHtml5} color="#E44D26" label="HTML" />
+            <SkillCard Icon={FaCss3Alt} color="#264DE4" label="CSS" />
+            <SkillCard Icon={RiTailwindCssFill} color="#06B6D4" label="Tailwind CSS" />
+            <SkillCard Icon={FaBootstrap} color="#7952B3" label="Bootstrap" />
+            <SkillCard Icon={IoLogoJavascript} color="#F7DF1E" label="JavaScript" />
+            <SkillCard Icon={FaReact} color="#61DAFB" label="React JS" />
+          </div>
+        </div>
+
+        {/* Backend */}
+        <div
+          className="bg-[#020140] backdrop-blur-2xl hover:scale-105 transform-all duration-300 p-3 rounded-md border-2 border-purple-600"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h1 className="text-xl font-medium pb-3 text-center text-white">
+            Backend Languages
+          </h1>
+          <div className="flex flex-wrap gap-4 p-3 justify-center">
+            <div
+              className="items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-md flex flex-col text-center transition-all duration-200 transform hover:scale-110 hover:bg-white/20"
+              data-aos="zoom-in"
+            >
+              <p className="text-7xl text-[#303030]">ex</p>
+              <p className="font-bold text-md mt-2 text-white">Express.js</p>
+            </div>
+            <SkillCard Icon={SiMongodb} color="#47A248" label="MongoDB" />
+            <SkillCard Icon={SiMysql} color="#00758F" label="MySQL" />
+            <SkillCard Icon={SiAppwrite} color="#F02E65" label="Appwrite" />
+          </div>
+        </div>
+
+        {/* Languages & Frameworks */}
+        <div
+          className="bg-[#020140] backdrop-blur-2xl hover:scale-105 transform-all duration-300 p-3 rounded-md border-2 border-purple-600"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h1 className="text-xl font-medium pb-3 text-center text-white">
+            Languages & Frameworks
+          </h1>
+          <div className="flex flex-wrap gap-4 p-3 justify-center">
+            <SkillCard Icon={SiCplusplus} color="#00599C" label="C++" />
+            <SkillCard Icon={FaJava} color="#007396" label="Java" />
+            <SkillCard Icon={FaPython} color="#3776AB" label="Python" />
+            <SkillCard Icon={FaJsSquare} color="#F7DF1E" label="JavaScript" />
+            <SkillCard Icon={SiDjango} color="#092E20" label="Django" />
+          </div>
+        </div>
+
+        {/* Tools */}
+        <div
+          className="bg-[#020140] backdrop-blur-2xl hover:scale-105 transform-all duration-300 p-3 rounded-md border-2 border-purple-600"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h1 className="text-xl font-medium pb-3 text-center text-white">
+            Tools
+          </h1>
+          <div className="flex flex-wrap gap-4 p-3 justify-center">
+            <SkillCard Icon={VscVscodeInsiders} color="#007ACC" label="VS Code" />
+            <SkillCard Icon={SiIntellijidea} color="#000000" label="IntelliJ IDEA" />
+            <SkillCard Icon={SiJupyter} color="#F37626" label="Jupyter" />
+            <SkillCard Icon={SiPycharm} color="#21D789" label="PyCharm" />
+            <SkillCard Icon={FaGitAlt} color="#F1502F" label="Git" />
+            <SkillCard Icon={FaGithub} color="#ffffff" label="GitHub" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default skills
+// Reusable SkillCard with animation
+function SkillCard({ Icon, color, label }) {
+  return (
+    <div
+      data-aos="zoom-in"
+      className="items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-md flex flex-col text-center transition-all duration-200 transform hover:scale-110 hover:bg-white/20"
+    >
+      <Icon className={`h-[70px] w-[70px]`} style={{ color }} />
+      <p className="font-bold text-md mt-2 text-white">{label}</p>
+    </div>
+  );
+}
+
+export default Skills;
